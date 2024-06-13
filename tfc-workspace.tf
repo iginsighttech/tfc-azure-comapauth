@@ -24,17 +24,17 @@ resource "tfe_workspace" "my_workspace" {
   vcs_repo {
     branch         = var.tfc_workspace_branch
     identifier     = var.tfc_repo_path
-    oauth_token_id = "ot-6Vx5pJaLxX1XKRVT"
+    oauth_token_id = "ot-E1vKiNdoSkobSuRE"
   }
 }
 
 #https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_run_task
-resource "tfe_workspace_run_task" "wiz_runtask" {
-  workspace_id      = tfe_workspace.my_workspace.id
-  task_id           = "task-Gu3oT9WH32ajhaGi"
-  enforcement_level = "mandatory"
-  stage             = "post_plan"
-}
+#resource "tfe_workspace_run_task" "wiz_runtask" {
+ # workspace_id      = tfe_workspace.my_workspace.id
+  #task_id           = "task-Gu3oT9WH32ajhaGi"
+  #enforcement_level = "mandatory"
+  #stage             = "post_plan"
+#}
 
 
 # https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable
