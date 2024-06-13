@@ -16,7 +16,7 @@ data "tfe_project" "tfc_project" {
 resource "tfe_workspace" "my_workspace" {
   name                   = var.tfc_workspace_name
   organization           = var.tfc_organization_name
-  project_id             = data.tfc_project.tfc_project.id
+  project_id             = data.tfe_project.tfc_project.id
   working_directory      = var.tfc_working_directory
   auto_apply             = true
   auto_apply_run_trigger = true
