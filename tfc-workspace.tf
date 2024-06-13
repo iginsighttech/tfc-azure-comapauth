@@ -4,7 +4,7 @@
 # Data source used to grab the project under which a workspace will be created.
 #
 # https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/project
-data "tfc_project" "tfc_project" {
+data "tfe_project" "tfc_project" {
   name         = var.tfc_project_name
   organization = var.tfc_organization_name
 }
